@@ -39,6 +39,10 @@ a span {
   cursor: pointer;
 }
 
+.hours-of-operation {
+  border: 1pt solid gray;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

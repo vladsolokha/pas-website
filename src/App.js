@@ -12,6 +12,8 @@ function App() {
     message: 'I was wondering about availability and rates. I need help with '
   });
 
+  const [hoursHover, setHoursHover] = useState({display: 'Hours of Operation'});
+
   const handleQuoteOpenForm = () => {
     setIsQuoteOpen(true);
   }
@@ -61,20 +63,29 @@ function App() {
         <h2>Electronics and audio equipment repair and service</h2>
         <h2>Specializing in the industry for 30+ years</h2>
         <h3>Address: 657 N. James Rd. Columbus, OH 43219</h3>
-        <img 
+        
+        <a 
+          href='https://www.google.com/maps/dir//Pro+Audio+Service+LLC/@39.9834382,-83.0593351,11.73z/data=!5m1!1e4'
+          target="_blank"
+          rel="noopener noreferrer">
+          <img 
           className="directions-image"
           src={directionsImage} 
-          alt="Map with pin that links to Google Maps directions">
-            <a 
-              href='https://www.google.com/maps/dir//Pro+Audio+Service+LLC/@39.9834382,-83.0593351,11.73z/data=!5m1!1e4'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>Get Directions to Pro Audio Service LLC</span>
-            </a>
-        </img>
-        <h3>Open Monday-Friday 10am-5pm</h3>
-        <h3>Contact by phone - Call Alex (614) 340-3373</h3>
+          alt="Map with pin that links to Google Maps directions" />
+          {/* <span>Get Directions to Pro Audio Service LLC</span> */}
+        </a>
+        
+        <h2 
+          className='hours-of-operation'
+          onMouseEnter={e => {
+            setHoursHover({display: 'Monday-Friday 10am-5pm'})}}
+          onMouseLeave={e => {
+            setHoursHover({display: 'Hours of Operation'})}}>
+        </h2>
+        
+        <a href='tel::614-867-5309'>
+          <h3>Contact by phone - Call our Specialists (614) 340-3373</h3>
+        </a>
         
         <button className="get-quote" onClick={handleQuoteOpenForm}>
           {"Get a Quote"} 
