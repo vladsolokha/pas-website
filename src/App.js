@@ -11,7 +11,16 @@ function App() {
       <div className="App-header">
         <h1>Pro Audio Services LLC</h1>
         <h2>Electronics and audio equipment repair and service.</h2>
-        <h2>Specialized repair of legacy and modern electronics and hardware.</h2>        
+        <h2>Specialized repair of legacy and modern electronics and hardware.</h2>
+        <h2>We offer</h2>
+        <ul>
+          <li>recone speakers</li>
+          <li>receivers</li>
+          <li>projectors</li>
+          <li>audio equipment</li>
+          <li>wireless equipment</li>
+          <li>and much more...</li>
+        </ul>        
         
       <Pictures /> 
 
