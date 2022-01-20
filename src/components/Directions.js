@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import directionsImage from '../assets/prs-map.png';
+import directionsImage from '../assets/prs-map.PNG';
 
 function Directions() {
     const [hoursShown, setHoursShown] = useState(false);
