@@ -1,50 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-.App {
-    padding: 0;
-        /* adapted from https://www.joshwcomeau.com/gradient-generator?colors=e87d3b|f4fcef|4394ff&angle=180&colorMode=lab&precision=10&easingCurve=0.21810334304283405|0.8043103711358432|0.35172403269800645|-0.02327583576070851 */
-    background-image: linear-gradient(
-    180deg,
-    hsl(23deg 79% 57%) 0%,
-    hsl(23deg 82% 64%) 7%,
-    hsl(24deg 85% 71%) 12%,
-    hsl(25deg 86% 77%) 16%,
-    hsl(27deg 84% 83%) 20%,
-    hsl(35deg 72% 89%) 25%,
-    hsl(97deg 68% 96%) 29%,
-    hsl(205deg 45% 91%) 34%,
-    hsl(218deg 71% 87%) 39%,
-    hsl(220deg 85% 83%) 46%,
-    hsl(220deg 93% 78%) 54%,
-    hsl(218deg 97% 72%) 66%,
-    hsl(214deg 100% 63%) 95%
-    );
-    display: flex;
-    justify-content: space-evenly;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300&display=swap');
+.App {   
+    padding: 0px;
     font-size: 14px;
+    text-align: center;
+    background-size: 100% 100%;
+    
 }
 
-h1, h2, h3, h4, h5, h6, li, p, a{
+/* Header Section */
+h1 {
     font-family: 'Roboto Mono', monospace;
-}
-  
-a span {
-    height: 1px;
-    width: 1px;
-    position: absolute;
-    overflow: hidden;
-    top: -10px;
+    font-size: 48px;
 }
 
-.directions-section {
-    position: relative;
-    width: auto;
+h2 {
+    font-family: inherit;
+    font-size: 14px;
+    font-style: italic;
+} 
+
+h3, ul, li, p, a {
+    font-family: inherit;
+    font-size: 18px;
 }
+.services-text {
+    margin-bottom: 0px;
+    margin-top: 32px;
+}
+ul {
+    margin-top: 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+/* Pictures Section */
+.pictures-section img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.directions-image-container {
+    position: relative;
+}
+
 .directions-image {
     cursor: pointer;
     opacity: 1;
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -90,4 +96,10 @@ a span {
 .button:hover {
     background-color: hsl(214deg 100% 63%) 95%;
     color: white;
+}
+
+.review-note {
+    font-family: inherit;
+    font-size: 12px;
+    
 }

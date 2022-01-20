@@ -12,7 +12,7 @@ function App() {
         <h1>Pro Audio Services LLC</h1>
         <h2>Electronics and audio equipment repair and service.</h2>
         <h2>Specialized repair of legacy and modern electronics and hardware.</h2>
-        <h2>We offer</h2>
+        <h3 className='services-text'>Services:</h3>
         <ul>
           <li>recone speakers</li>
           <li>receivers</li>
@@ -21,17 +21,14 @@ function App() {
           <li>wireless equipment</li>
           <li>and much more...</li>
         </ul>        
-        
-      <Pictures /> 
+      </div>
 
-      <Reviews />
-
-      <Directions /> 
-      
-      <Contact />
-      
+    <Pictures /> 
+    <Directions /> 
+    <Reviews />
+    <Contact />
+    
     </div>
-  </div>
   );
 }
 

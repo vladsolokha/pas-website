@@ -56,7 +56,7 @@ function Contact() {
     return (
         <div className='contact-section'>
         <a href='tel::(614) 340-3373'>
-          <h3>Contact by phone - Call our Specialists (614) 340-3373</h3>
+          <h3>Call (614) 340-3373</h3>
         </a>
         
         <button className="get-quote-button" onClick={handleQuoteOpenForm}>
