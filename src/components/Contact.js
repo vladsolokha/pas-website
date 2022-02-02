@@ -4,6 +4,7 @@ function Contact() {
     const [isQuoteOpen, setIsQuoteOpen] = useState(false);
     const [error, setError] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [hoursShown, setHoursShown] = useState(false);
     const [person, setPerson] = useState({ 
         name: '',
         email: '',
@@ -58,6 +59,21 @@ function Contact() {
         <a href='tel::(614) 340-3373'>
           <h3>Call (614) 340-3373</h3>
         </a>
+
+        <div className='hours-of-operation'>
+            
+            <button 
+                onMouseEnter={() => {setHoursShown(true)}}
+                onMouseLeave={() => {setHoursShown(false)}}>
+            See Hours of Operation
+            {hoursShown && (
+                <div className='hours-of-operation-shown'>
+                We are Open Monday - Friday 10 am - 5 pm
+                </div>
+            )}
+            </button>
+
+        </div>
         
         <button className="get-quote-button" onClick={handleQuoteOpenForm}>
           {"Get a Quote"} 

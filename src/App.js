@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import './App.css';
 
 function App() {
+    
   return (
     <div className="App">
       <div className="App-header">
@@ -24,8 +25,11 @@ function App() {
       </div>
 
     <Pictures /> 
-    <Directions /> 
+
+    <Directions />
+  
     <Reviews />
+    
     <Contact />
     
     </div>
