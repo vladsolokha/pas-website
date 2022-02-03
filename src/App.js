@@ -1,8 +1,5 @@
 import React, {useState} from 'react';
 import Pictures from './components/Pictures';
-import Reviews from './components/Reviews';
-import Directions from './components/Directions';
-import Contact from './components/Contact';
 import './App.css';
 
 function App() {
@@ -43,7 +40,7 @@ function App() {
                     src="https://maps.googleapis.com/maps/api/staticmap?center=39.986736,-82.907611&zoom=10&scale=2&size=300x200&maptype=roadmap&key=AIzaSyAe9vA21yla0hy2nNjWXjuLeAJuB0Frpko&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C657+N+James+Rd,+Columbus,+OH+43219"
                     width="300"
                     alt="Map with pin that links to Google Maps directions" />
-                
+                <div className='img-overlay'>Directions to Pro Audio Services</div>
             
             </a>
             
@@ -54,10 +51,10 @@ function App() {
       <div className='reviews-section'>
         <a 
           href='https://g.page/r/CUSrgI_mm60DEAg/review' 
-          target="_blank" rel="noopener noreferrer">
-        Click here to leave us a Review!
+          target="_blank" rel="noreferrer">
+          <button>Leave us a Review
+          </button>
         </a>
-        
         <h3 className='review-note'>If we did not meet your service expectations please contact us and we will be happy to resolve the issue.</h3>
       </div>
     
@@ -65,36 +62,36 @@ function App() {
       
         {/* Phone number section */}
         <div className='phone-number-section'>
-          <button>
+          <a href='tel::(614) 340-3373'>
+            <button>
               Call (614) 340-3373
-            <a href='tel::(614) 340-3373'>
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
 
         {/* Hours section */}
         <div className='hours-of-operation'>
           <button 
-              onMouseEnter={() => {setHoursShown(true)}}
-              onMouseLeave={() => {setHoursShown(false)}}>
-          See Hours of Operation
-          {hoursShown && (
+              onClick={() => {setHoursShown(!hoursShown)}}>
+          {hoursShown ? (
               <div className='hours-of-operation-shown'>
-              We are Open Monday - Friday 10 am - 5 pm
+              We are Open 
+              <br/>
+              Monday - Friday 
+              <br/>
+              10 am - 5 pm
               </div>
+          ): (
+              <div>See Hours of Operation</div>
           )}
+
           </button>
         </div>
         
-        {/* Message section */}
-        <div className='message-section'>
-          <button className="message-button">
-            Message Us
-          </button>
-        </div>
         
       </div>  
     
+
     </div>
   );
 }
