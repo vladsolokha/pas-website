@@ -30,52 +30,17 @@ function App() {
             <li>speakers</li>
             <li>receivers</li>
             <li>projectors</li>
+            <li>amplifiers</li>
+            <li>mixing consoles</li>
+            <li>radio equipment</li>
             <li>audio equipment</li>
             <li>wireless equipment</li>
             <li>and much more...</li>
           </ul>        
         </div>
 
-        <div className='directions-section'>
-            {/* Directions to Pro Audio Service */}
-            <a href={googleDirectionsUrl} target='_blank' rel='noopener noreferrer'>
-
-                {/* Google Static Map with API */}
-                <img 
-                    src="https://maps.googleapis.com/maps/api/staticmap?center=39.986736,-82.907611&zoom=10&scale=2&size=300x200&maptype=roadmap&key=AIzaSyAe9vA21yla0hy2nNjWXjuLeAJuB0Frpko&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C657+N+James+Rd,+Columbus,+OH+43219"
-                    width="300"
-                    alt="Map with pin that links to Google Maps directions" />
-                <div className='img-overlay'>Directions to Pro Audio Services</div>
-            
-            </a>
-            
-        </div>
-  
-      </div> 
-
-      <div className='reviews-section'>
-        <a 
-          href='https://g.page/r/CUSrgI_mm60DEAg/review' 
-          target="_blank" rel="noreferrer">
-          <button>Leave us a Review
-          </button>
-        </a>
-        <h3 className='review-note'>If we did not meet your service expectations please contact us and we will be happy to resolve the issue.</h3>
-      </div>
-    
-      <div className='contact-section'>
-      
-        {/* Phone number section */}
-        <div className='phone-number-section'>
-          <a href='tel::(614) 340-3373'>
-            <button>
-              Call (614) 340-3373
-            </button>
-          </a>
-        </div>
-
         {/* Hours section */}
-        <div className='hours-of-operation'>
+        <div className='middle-section'>
           <button 
               onClick={() => {setHoursShown(!hoursShown)}}>
           {hoursShown ? (
@@ -91,10 +56,75 @@ function App() {
           )}
 
           </button>
+
+          {/* Phone number section */}
+          <div className='phone-number-section'>
+            <a href='tel::(614)340-3373'>
+              <button>
+                Call (614)340-3373
+              </button>
+            </a>
+          </div>
+          
+          {/* email section */}
+          <div className='email-section'>
+            <a href='mailto:pasohio@gmail.com'>
+              <button>
+                Email Us
+              </button>
+            </a>
+          </div>
+
+          {/* Address section */}
+          <div className='address-section'>
+            
+            <a href='https://maps.apple.com/?q=Pro+Audio+Services+LLC&address=657,N+James+Rd,Columbus,Ohio&11=39.98687,82.90795&dirflg=d'>
+              <button>
+                Get Directions
+              </button>
+            </a>
+          
+          </div>
+          
         </div>
+
+        <div className='directions-section'>
+            {/* Directions to Pro Audio Service */}
+            <a href={googleDirectionsUrl} target='_blank' rel='noopener noreferrer'>
+
+                {/* Google Static Map with API */}
+                <img 
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=39.986736,-82.907611&zoom=10&scale=2&size=300x200&maptype=roadmap&key=AIzaSyAe9vA21yla0hy2nNjWXjuLeAJuB0Frpko&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C657+N+James+Rd,+Columbus,+OH+43219"
+                    width="300"
+                    alt="Google Maps directions" />
+                <div className='img-overlay'>Directions to Pro Audio Services</div>
+            
+            </a>
+            
+        </div>  
+
+      </div> 
+
+      <div className='reviews-section'>
         
+        <h3 className='review-note'>
+          We strive to support our customer's expectations for service and repairs. 
+          <br/>
+          If we did a great job and provided great service, please leave us a positive review.
+          <br/>
+          If we did not meet your service expectations please contact us and we will be happy to resolve the issue.
+        </h3>
         
-      </div>  
+        <a 
+          href='https://g.page/r/CUSrgI_mm60DEAg/review' 
+          target="_blank" rel="noreferrer">
+          <button>Google Reviews
+          </button>
+        </a>
+
+      </div>
+    
+
     
 
     </div>
