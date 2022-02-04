@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Pictures from './components/Pictures';
+import logo from './assets/Pro Audio Service Logo 4.png';
 import './App.css';
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <h1>Pro Audio Services LLC</h1>
+        <div className="logo-container">
+          <img className="logo" src={logo} alt="Pro Audio Service Logo" />
+        </div>
+        
         <h2>Electronics and audio equipment repair and service.</h2>
         <h2>Specialized repair of legacy and modern electronics and hardware.</h2>
       </div>
@@ -22,7 +26,7 @@ function App() {
         <div className="services-container">
           <h3 className='services-text'>Services:</h3>
           <ul>
-            <li>recone speakers</li>
+            <li>speakers</li>
             <li>receivers</li>
             <li>projectors</li>
             <li>audio equipment</li>

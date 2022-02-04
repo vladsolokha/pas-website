@@ -1,28 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300&display=swap');
 
 .App {   
-    padding: 5px;
-    margin: 5px;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 0;
     font-size: 14px;
     text-align: center;
-    background-size: 100% 100%;
 }
 
 /* Header Section */
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 48px;
+
+.logo-container {
+    max-width: 300px;
+    margin: auto;
 }
 
-h2 {
-    font-family: inherit;
-    font-size: 14px;
-    font-style: italic;
-} 
+.logo {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 0px;
+    border-bottom: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid; 
+    border-color: #000;
+}
 
-h3, ul, li, p, a {
-    font-family: inherit;
-    font-size: 18px;
+h2, h3, ul, li, p, a {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
 }
 
 a {
@@ -36,8 +44,9 @@ a:hover {
 }
 .services-text {
     margin: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
+
 ul {
     margin-top: 0px;
     padding-inline-start: 0px;
@@ -65,6 +74,8 @@ li {
 .directions-section {
     border: 5px solid #000;
     border-radius: 3px;
+    background-color: #000;
+    box-shadow:  5px 5px 12px 3px #E0E0E0;
     position: relative;
 }
 
