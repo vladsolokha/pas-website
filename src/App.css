@@ -4,6 +4,7 @@
     background-image: linear-gradient(#fff, #fff);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    min-height: 100%;
     padding: 0;
     margin: 0;
     font-size: 14px;
@@ -12,6 +13,14 @@
 
 /* Header Section */
 
+.App-header {
+    margin-bottom: 20px;
+}
+
+.app-sub-header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .logo-container {
     max-width: 300px;
     margin: auto;

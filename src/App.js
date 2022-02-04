@@ -15,9 +15,10 @@ function App() {
         <div className="logo-container">
           <img className="logo" src={logo} alt="Pro Audio Service Logo" />
         </div>
-        
-        <h2>Electronics and audio equipment repair and service.</h2>
-        <h2>Specialized repair of legacy and modern electronics and hardware.</h2>
+        <div className="app-sub-header">
+          <h2>Electronics and audio equipment repair and service.</h2>
+          <h2>Specialized repair of legacy and modern electronics and hardware.</h2>
+        </div>
       </div>
 
       <Pictures />
