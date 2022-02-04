@@ -63,6 +63,8 @@ li {
 }
 
 .directions-section {
+    border: 5px solid #000;
+    border-radius: 3px;
     position: relative;
 }
 
