@@ -23,6 +23,7 @@ User Stories
   - [ ] confirmation upon message submission 
 - [ ] transition show hide hours should be smooth
 - [ ] domain name will be registered on hover.com as proaudioservice.org
+- [ ] add yelp review
 
 
 ## Available Scripts
