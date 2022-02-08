@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Pictures from './components/Pictures';
 import logo from './assets/Pro Audio Service Logo 4.png';
-import bg from './assets/bg-img.jpg';
 import './App.css';
 
 function App() {
