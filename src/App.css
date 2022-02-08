@@ -1,28 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,300&display=swap');
 
 .App {   
-    padding: 5px;
-    margin: 5px;
+    height: inherit;
+    padding: 0;
+    margin: 0;
     font-size: 14px;
     text-align: center;
-    background-size: 100% 100%;
+    opacity: 1;
 }
+
+.bg-img {
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('./assets/bg-img.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* Header Section */
-h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 48px;
+
+.App-header {
+    margin-bottom: 20px;
 }
 
-h2 {
-    font-family: inherit;
-    font-size: 14px;
-    font-style: italic;
-} 
+.app-sub-header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.logo-container {
+    max-width: 300px;
+    margin: auto;
+}
 
-h3, ul, li, p, a {
-    font-family: inherit;
-    font-size: 18px;
+.logo {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 0px;
+    border-bottom: 2px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid; 
+    border-color: #adadad;
+}
+
+h2, h3, ul, li, p, a {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
 }
 
 a {
@@ -36,8 +60,9 @@ a:hover {
 }
 .services-text {
     margin: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
+
 ul {
     margin-top: 0px;
     padding-inline-start: 0px;
@@ -45,6 +70,7 @@ ul {
 
 li {
     list-style: none;
+    padding: 1px;
 }
 
 /* Pictures Section */
@@ -55,15 +81,35 @@ li {
 .services-directions-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 32px;
+    gap: 15px 40px;
+    padding: 15px;
+}
+
+.services-container {
+    margin-bottom: 20px;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .directions-section {
+    margin: auto;
+    max-width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow:  5px 5px 12px 3px #adadad;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .image {
@@ -84,14 +130,32 @@ li {
 
 .directions-section:hover .img-overlay {
     opacity: 1;
+    box-shadow: 8px 8px 15px 6px #a0a0a0;
 }
 
 .review-note {
-    width: 300px;
+    max-width: 530px;
     text-align: left;
-    font-family: inherit;
-    font-size: 12px;
-    margin: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.reviews-section {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.review-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 375px) {
@@ -99,46 +163,36 @@ li {
         text-align: center;
     }
 }
-.reviews-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 32px;
-    margin-bottom: 20px;
-}
 
-.contact-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 32px;
-    margin-bottom: 20px;
-}
 
 button {
-    font-family: inherit;
-    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
     color: #000;
     background-color: #fff;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
     width: auto;
     height: auto;
-    border: none;
-    margin: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow:  5px 5px 12px 3px #adadad;
+    margin: 10px;
 }
 
 button:hover {
     text-decoration: underline;
     color: #fff;
     background-color: #000;
-    transition: 0.7s ease;
+    transition: 0.5s ease-in-out;
+    box-shadow: 8px 8px 15px 6px #a0a0a0;
     ;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(2px);
+    transition: 0.5 ease;
 }
 
 .message-us-shown {
