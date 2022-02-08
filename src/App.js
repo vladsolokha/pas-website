@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { CSSTransition } from 'react-transition-group';
 import Pictures from './components/Pictures';
 import logo from './assets/Pro Audio Service Logo 4.png';
 import './App.css';
@@ -6,9 +7,11 @@ import './App.css';
 function App() {
 
   const googleDirectionsUrl = "https://www.google.com/maps/dir//Pro+Audio+Service+LLC/@39.9834382,-83.0593351,11.73z/data=!5m1!1e4"
-  const [hoursShown, setHoursShown] = useState(false);
-
-    
+  
+  // Transition consts for 'see hours' button
+  const [hoursButton, setHoursButton] = useState(true);
+  const [hoursMessage, setHoursMessage] = useState(false);
+      
   return (
     <div className="App" >
       <div className="App-header">
@@ -44,21 +47,31 @@ function App() {
 
           {/* Hours section */}
           <div className='middle-section'>
-            <button 
-                onClick={() => {setHoursShown(!hoursShown)}}>
-            {hoursShown ? (
-                <div className='hours-of-operation-shown'>
-                We are Open 
-                <br/>
-                Monday - Friday 
-                <br/>
-                10 am - 5 pm
-                </div>
-            ): (
-                <div>See Hours of Operation</div>
-            )}
+            
+            <div className='hours-container'> 
+              {hoursButton && (
+                <button onClick={() => {setHoursMessage(true)}}>
+                  See Hours of Operation
+                </button>
+              )}
+              <CSSTransition 
+                in={hoursMessage}
+                timeout={222}
+                classNames="hours"
+                unmountOnExit
+                onEnter={() => setHoursButton(false)}
+                onExited={() => setHoursButton(true)}>
+              
+                <button onClick={() => {setHoursMessage(false)}}>
+                  We are Open 
+                  <br/>
+                  Monday - Friday 
+                  <br/>
+                  10 am - 5 pm
+                </button>
+              </CSSTransition>         
+            </div>
 
-            </button>
 
             {/* Address section */}
             <div className='address-section'>

@@ -100,6 +100,26 @@ li {
     margin-bottom: 20px;
 }
 
+.hours-container {
+    width: 181px; 
+}
+
+/* CSS transitions used to fade hours button */
+.hours-enter {
+    opacity: 0;
+    transition: opacity 700ms ease;
+  }
+  .hours-enter-active {
+    opacity: 1;
+}
+.hours-exit {
+    opacity: 1;
+    transition: opacity 700ms ease;
+}
+.hours-exit-active {
+    opacity: 0;
+  }
+
 .directions-section {
     margin: auto;
     max-width: 300px;
@@ -169,12 +189,12 @@ button {
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     color: #000;
-    background-color: #fff;
+    background-color: transparent;
     text-align: center;
     text-decoration: none;
     width: auto;
     height: auto;
-    border: 2px solid #000;
+    border: 2px solid #777;
     border-radius: 5px;
     box-shadow:  5px 5px 12px 3px #adadad;
     margin: 10px;
@@ -184,6 +204,7 @@ button:hover {
     text-decoration: underline;
     color: #fff;
     background-color: #000;
+    border-color: #000;
     transition: 0.5s ease-in-out;
     box-shadow: 8px 8px 15px 6px #a0a0a0;
     ;
