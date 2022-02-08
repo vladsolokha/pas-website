@@ -130,7 +130,7 @@ function App() {
             </a>
 
             <a 
-              href='#' 
+              href='https://www.yelp.com/' 
               target="_blank" rel="noreferrer"
               alt='Yelp reviews page for Pro Audio Services LLC'>
               <button>Leave Us a Yelp Review
