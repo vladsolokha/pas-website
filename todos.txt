@@ -1,0 +1,9 @@
+todos
+
+animate see more list as it appears (sequentially?)
+
+add yelp business URL
+
+change 'email' button to 'message' which opens form component to submit to AWS SAS
+
+
