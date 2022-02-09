@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Pictures from './components/Pictures';
