@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { CSSTransition } from 'react-transition-group';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Pictures from './components/Pictures';
@@ -92,7 +92,7 @@ function App() {
               )}
               <CSSTransition 
                 in={hoursMessage}
-                timeout={222}
+                timeout={333}
                 classNames="hours"
                 unmountOnExit
                 onEnter={() => setHoursButton(false)}
