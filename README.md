@@ -17,11 +17,11 @@ User Stories
 - ✅ user should see phone contact info
 - ✅ user fills out form with name, phone, email (required), and message
 - ✅ user clicks on get quote and a form appears
-- [ ] message us opens form below button (How can we help?)
+- [ ] message opens form below button (How can we help?)
   - [ ] client gives name, phone or email (req), message (req), captcha
   - [ ] form sent to server for processing/sending/confimation (AWS SAS)
   - [ ] confirmation upon message submission 
-- [ ] transition show hide hours should be smooth
+- ✅ transition show hide hours should be smooth
 - [ ] domain name will be registered on hover.com as proaudioservice.org
 - [ ] add yelp review
 
