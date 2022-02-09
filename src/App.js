@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Pictures from './components/Pictures';
 import logo from './assets/Pro Audio Service Logo 4.png';
 import './App.css';
@@ -11,6 +13,8 @@ function App() {
   // Transition consts for 'see hours' button
   const [hoursButton, setHoursButton] = useState(true);
   const [hoursMessage, setHoursMessage] = useState(false);
+  const [seeMoreButton, setSeeMoreButton] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
       
   return (
     <div className="App" >
@@ -32,17 +36,49 @@ function App() {
           <div className="services-container">
             <h3 className='services-text'>Services:</h3>
             <ul>
-              <li>speakers</li>
+              <li>pro and home audio speakers repair</li>
+              <li>recone, refoam, replace</li>
+              <li>DJ equipment</li>
+              <li>PA speakers</li>
+              <li>power amps</li>
               <li>receivers</li>
-              <li>projectors</li>
-              <li>amplifiers</li>
-              <li>turn tables</li>
-              <li>mixing consoles</li>
-              <li>radio equipment</li>
-              <li>audio equipment</li>
-              <li>wireless equipment</li>
-              <li>and much more...</li>
-            </ul>        
+            </ul>
+            <div>
+              {seeMoreButton && (
+                <div className='fa-caret-container' onClick={() => {setIsExpanded(true)}}>
+                  <div>see more</div>
+                  <FontAwesomeIcon icon={faCaretDown} className='fa-caret'/>
+                </div>
+              )}
+              <CSSTransition 
+                in={isExpanded}
+                timeout={222}
+                classNames="services-expand"
+                unmountOnExit
+                onEnter={() => setSeeMoreButton(false)}
+                onExited={() => setSeeMoreButton(true)}>
+                <div className='services-expand'>
+                  {isExpanded && (
+                    <ul>  
+                      <li className='hidden-services'>vintage audio equipment</li>
+                      <li>turntable</li>
+                      <li>tape deck</li>
+                      <li>CD players</li>
+                      <li>audio mixers</li>
+                      <li>wireless and wired microphones</li>
+                      <li>rebuild speaker drivers</li>
+                      <li>cable repair and custom build</li>
+                    </ul>
+                  )}
+                </div>
+              </CSSTransition>
+              {!seeMoreButton && (
+                <div className='fa-caret-container' onClick={() => {setIsExpanded(false)}}>
+                      <div>see less</div>
+                      <FontAwesomeIcon icon={faCaretUp} className='fa-caret'/>
+                </div>
+              )}
+            </div>  
           </div>
 
           {/* Hours section */}
@@ -51,7 +87,7 @@ function App() {
             <div className='hours-container'> 
               {hoursButton && (
                 <button onClick={() => {setHoursMessage(true)}}>
-                  See Hours of Operation
+                  Open Hours
                 </button>
               )}
               <CSSTransition 
@@ -63,11 +99,7 @@ function App() {
                 onExited={() => setHoursButton(true)}>
               
                 <button onClick={() => {setHoursMessage(false)}}>
-                  We are Open 
-                  <br/>
-                  Monday - Friday 
-                  <br/>
-                  10 am - 5 pm
+                  Weekdays 10-5
                 </button>
               </CSSTransition>         
             </div>
@@ -85,24 +117,6 @@ function App() {
                 </button>
               </a>
             
-            </div>
-
-            {/* Phone number section */}
-            <div className='phone-number-section'>
-              <a href='tel::(614)340-3373' for='call us for a quote'>
-                <button>
-                  Call (614)340-3373
-                </button>
-              </a>
-            </div>
-            
-            {/* email section */}
-            <div className='email-section'>
-              <a href='mailto:pasohio@gmail.com'>
-                <button>
-                  Email Us
-                </button>
-              </a>
             </div>
                     
           </div>
@@ -127,8 +141,7 @@ function App() {
         <div className='reviews-section'>
           
           <h3 className='review-note'>
-            We strive to support our customer's expectations for service and repairs. 
-            If we did a great job and provided great service, please leave us a positive review.
+            Leave a Review  
           </h3>
           
 
@@ -138,7 +151,7 @@ function App() {
               href='https://g.page/r/CUSrgI_mm60DEAg/review' 
               target="_blank" rel="noreferrer"
               alt='google reviews page for Pro Audio Services LLC'>
-              <button>Leave Us a Google Review
+              <button>Google
               </button>
             </a>
 
@@ -146,7 +159,7 @@ function App() {
               href='https://www.yelp.com/' 
               target="_blank" rel="noreferrer"
               alt='Yelp reviews page for Pro Audio Services LLC'>
-              <button>Leave Us a Yelp Review
+              <button>Yelp
               </button>
             </a>
           
@@ -154,9 +167,28 @@ function App() {
           
           
           <h3 className='review-note'>
-            If we did not meet your service expectations please contact us and we will be happy to resolve the issue. 
+            Contact Us 
           </h3>
           
+          <div className='contact-links'>
+            {/* Phone number section */}
+            <div className='phone-number-section'>
+                <a href='tel::(614)340-3373' for='call us for a quote'>
+                  <button>
+                    Call
+                  </button>
+                </a>
+            </div>
+              
+            {/* email section */}
+            <div className='email-section'>
+              <a href='mailto:pasohio@gmail.com'>
+                <button>
+                  Email
+                </button>
+              </a>
+            </div>
+          </div>
 
         </div>
     
