@@ -46,7 +46,7 @@ function App() {
             <div>
               {seeMoreButton && (
                 <div className='fa-caret-container' onClick={() => {setIsExpanded(true)}}>
-                  <div>see more</div>
+                  <div className='caret-text'>see more</div>
                   <FontAwesomeIcon icon={faCaretDown} className='fa-caret'/>
                 </div>
               )}
@@ -74,7 +74,7 @@ function App() {
               </CSSTransition>
               {!seeMoreButton && (
                 <div className='fa-caret-container' onClick={() => {setIsExpanded(false)}}>
-                      <div>see less</div>
+                      <div className='caret-text'>see less</div>
                       <FontAwesomeIcon icon={faCaretUp} className='fa-caret'/>
                 </div>
               )}
