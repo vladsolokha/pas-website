@@ -16,8 +16,6 @@
     height: 100%;
 }
 
-
-
 /* Header Section */
 
 .App-header {
@@ -61,21 +59,18 @@ a:hover {
 .services-text {
     margin: 0px;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 ul {
-    margin-top: 0px;
+    margin: 0px;
     padding-inline-start: 0px;
+    text-align: left;
 }
 
 li {
     list-style: none;
     padding: 1px;
-}
-
-/* Pictures Section */
-.pictures-section img {
-    width: 50%;
 }
 
 .services-directions-container {
@@ -92,6 +87,32 @@ li {
     margin-bottom: 20px;
 }
 
+.hidden-services {
+    margin-top: 4px;
+}
+
+.fa-caret-container {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.caret-text {
+    color:rgb(20, 40, 220)
+}
+
+.fa-caret-container:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.fa-caret {
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
 .middle-section {
     display: flex;
     flex-direction: column;
@@ -99,6 +120,42 @@ li {
     align-items: center;
     margin-bottom: 20px;
 }
+
+.hours-container {
+    width: 181px; 
+}
+
+/* CSS transitions used to fade hours button */
+.hours-enter {
+    opacity: 0;
+}
+.hours-enter-active {
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+}
+.hours-exit {
+    opacity: 1;
+}
+.hours-exit-active {
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+  }
+
+  /* CSS transitions used on services expansion button 'see more' */
+.services-expand-enter {
+    opacity: 0;
+}
+.services-expand-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+.services-expand-exit {
+    opacity: 1;
+}
+.services-expand-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
 
 .directions-section {
     margin: auto;
@@ -139,6 +196,7 @@ li {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     padding: 10px;
+    margin: 0;
 }
 
 .reviews-section {
@@ -148,33 +206,27 @@ li {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    
 }
 
-.review-links {
+.review-links, .contact-links {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 375px) {
-    .review-note {
-        text-align: center;
-    }
-}
 
 
 button {
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
-    color: #000;
-    background-color: #fff;
+    color:rgb(20, 40, 220);
+    background-color: transparent;
     text-align: center;
     text-decoration: none;
     width: auto;
     height: auto;
-    border: 2px solid #000;
+    border: 2px solid #777;
     border-radius: 5px;
     box-shadow:  5px 5px 12px 3px #adadad;
     margin: 10px;
@@ -182,8 +234,9 @@ button {
 
 button:hover {
     text-decoration: underline;
-    color: #fff;
+    color:#fff;
     background-color: #000;
+    border-color: #000;
     transition: 0.5s ease-in-out;
     box-shadow: 8px 8px 15px 6px #a0a0a0;
     ;
