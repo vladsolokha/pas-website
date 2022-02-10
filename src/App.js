@@ -184,7 +184,7 @@ function App() {
             <div className='email-section'>
               <a href='mailto:pasohio@gmail.com'>
                 <button>
-                  Email
+                  Message
                 </button>
               </a>
             </div>

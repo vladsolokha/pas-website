@@ -1,9 +1,16 @@
 todos
 
 animate see more list as it appears (sequentially?)
+git checkout -b smooth-transitions
 
 add yelp business URL
 
+
 change 'email' button to 'message' which opens form component to submit to AWS SNS
+create captcha
+create backend
+
+git checkout -b form 
+
 https://aws.amazon.com/sns/?did=ft_card&trk=ft_card&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
 
