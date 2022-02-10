@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
-import Pictures from './components/Pictures';
+import { faCaretDown , faCaretUp, faPhone, faKeyboard } from '@fortawesome/free-solid-svg-icons';
+import Form from './components/Form';
 import logo from './assets/Pro Audio Service Logo 4.png';
 import './App.css';
 
@@ -15,6 +15,8 @@ function App() {
   const [hoursMessage, setHoursMessage] = useState(false);
   const [seeMoreButton, setSeeMoreButton] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const [formState, setFormState] = useState(false);
       
   return (
     <div className="App" >
@@ -29,8 +31,6 @@ function App() {
       </div>
 
       <div className="bg-img">
-        
-        <Pictures />
 
         <div className="services-directions-container">  
           <div className="services-container">
@@ -118,14 +118,9 @@ function App() {
               </a>
             
             </div>
-                    
-          </div>
-
-        </div> 
-
-        <div className='directions-section'>
-          {/* Directions to Pro Audio Service */}
-          <a href={googleDirectionsUrl} target='_blank' rel='noopener noreferrer' alt='directions to Pro Audio Services LLC using google maps'>
+            <div className='directions-section'>
+              {/* Directions to Pro Audio Service */}
+              <a href={googleDirectionsUrl} target='_blank' rel='noopener noreferrer' alt='directions to Pro Audio Services LLC using google maps'>
 
               {/* Google Static Map with API */}
               <img 
@@ -134,64 +129,72 @@ function App() {
                   alt="Google Maps directions" />
               <div className='img-overlay'>Directions to Pro Audio Services</div>
           
-          </a>
+              </a>
               
+            </div>         
+          </div>
+
         </div> 
+
+        
         
         <div className='reviews-section'>
-          
-          <h3 className='review-note'>
-            Leave a Review  
-          </h3>
-          
-
-          <div className='review-links'>
-
-            <a 
-              href='https://g.page/r/CUSrgI_mm60DEAg/review' 
-              target="_blank" rel="noreferrer"
-              alt='google reviews page for Pro Audio Services LLC'>
-              <button>Google
-              </button>
-            </a>
-
-            <a 
-              href='https://www.yelp.com/' 
-              target="_blank" rel="noreferrer"
-              alt='Yelp reviews page for Pro Audio Services LLC'>
-              <button>Yelp
-              </button>
-            </a>
-          
-          </div>
-          
-          
-          <h3 className='review-note'>
-            Contact Us 
-          </h3>
-          
-          <div className='contact-links'>
-            {/* Phone number section */}
-            <div className='phone-number-section'>
-                <a href='tel::(614)340-3373' for='call us for a quote'>
-                  <button>
-                    Call
-                  </button>
-                </a>
-            </div>
-              
-            {/* email section */}
-            <div className='email-section'>
-              <a href='mailto:pasohio@gmail.com'>
-                <button>
-                  Message
+          <div>
+            <h3 className='review-note'>
+              Leave a Review  
+            </h3>
+            
+            <div className='review-links'>
+              <a 
+                href='https://g.page/r/CUSrgI_mm60DEAg/review' 
+                target="_blank" rel="noreferrer"
+                alt='google reviews page for Pro Audio Services LLC'>
+                <button>Google
+                </button>
+              </a>
+              <a 
+                href='https://www.yelp.com/' 
+                target="_blank" rel="noreferrer"
+                alt='Yelp reviews page for Pro Audio Services LLC'>
+                <button>Yelp
                 </button>
               </a>
             </div>
           </div>
+          
+          <div>
+            <h3 className='review-note'>
+              Contact Us 
+            </h3>
+            
+            <div className='contact-links'>
+              {/* Phone number section */}
+              <div className='phone-number-section'>
+                  <a href='tel::(614)340-3373' for='call us for a quote'>
+                    <button>
+                      Call {' '} 
+                      <FontAwesomeIcon icon={faPhone} className='fa-phone'/>
+                    </button>
+                  </a>
+              </div>
+                
+              {/* email section */}
+              <div className='email-section'>
+                
+                  <button onClick={() => setFormState(!formState)}>
+                    Message {' '}
+                    <FontAwesomeIcon icon={faKeyboard} className='fa-Keyboard'/>
+                  </button>
+                
+              </div>
 
+            </div>
+          </div>
         </div>
-    
+      <div className='form-container'>'          
+        {formState && 
+          <Form />}
+      </div>          
       </div>
     
 

@@ -91,6 +91,22 @@ li {
     margin-top: 4px;
 }
 
+  /* CSS transitions used on services expansion button 'see more' */
+  .services-expand-enter {
+    opacity: 0;
+}
+.services-expand-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+.services-expand-exit {
+    opacity: 1;
+}
+.services-expand-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
 .fa-caret-container {
     font-family: 'Roboto Mono', monospace;
     display: flex;
@@ -141,32 +157,18 @@ li {
     transition: opacity 0.8s ease-in;
   }
 
-  /* CSS transitions used on services expansion button 'see more' */
-.services-expand-enter {
-    opacity: 0;
-}
-.services-expand-enter-active {
-    opacity: 1;
-    transition: opacity 1s ease-in;
-}
-.services-expand-exit {
-    opacity: 1;
-}
-.services-expand-exit-active {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-  }
+
 
 .directions-section {
     margin: auto;
-    max-width: 300px;
+    width: 300px;
     height: 200px;
-    padding: 10px;
-    border: 2px solid #000;
+    padding: 5px;
+    border: 2px solid #777;
     border-radius: 5px;
     box-shadow:  5px 5px 12px 3px #adadad;
     position: relative;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .image {
@@ -190,6 +192,17 @@ li {
     box-shadow: 8px 8px 15px 6px #a0a0a0;
 }
 
+
+
+.reviews-section {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
 .review-note {
     max-width: 530px;
     text-align: left;
@@ -198,17 +211,6 @@ li {
     padding: 10px;
     margin: 0;
 }
-
-.reviews-section {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    
-}
-
 .review-links, .contact-links {
     display: flex;
     flex-direction: row;
