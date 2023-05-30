@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Pictures from './components/Pictures';
 import logo from './assets/Pro Audio Service Logo 4.png';
+import map from './assets/map_static_img.png';
 import './App.css';
 
 function App() {
@@ -129,7 +130,8 @@ function App() {
 
               {/* Google Static Map with API */}
               <img 
-                  src="https://maps.googleapis.com/maps/api/staticmap?center=39.986736,-82.907611&zoom=10&scale=2&size=300x200&maptype=roadmap&key=AIzaSyAe9vA21yla0hy2nNjWXjuLeAJuB0Frpko&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C657+N+James+Rd,+Columbus,+OH+43219"
+                  // src="https://maps.googleapis.com/maps/api/staticmap?center=39.986736,-82.907611&zoom=10&scale=2&size=300x200&maptype=roadmap&key=AIzaSyAe9vA21yla0hy2nNjWXjuLeAJuB0Frpko&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C657+N+James+Rd,+Columbus,+OH+43219"
+                  src={map}
                   width="300"
                   alt="Google Maps directions" />
               <div className='img-overlay'>Directions to Pro Audio Services</div>
