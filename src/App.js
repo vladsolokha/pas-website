@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown , faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Pictures from './components/Pictures';
 import logo from './assets/Pro Audio Service Logo 4.png';
-import map from './assets/map_static_img.png';
+import map from './assets/map_static_img.jpg';
 import './App.css';
 
 function App() {
@@ -36,7 +36,36 @@ function App() {
         <div className="services-directions-container">  
           <div className="services-container">
             <h3 className='services-text'>Services:</h3>
-            <ul>
+            <ul class="scroll-container">
+                <li>pro and home audio speakers repair</li>
+                <li>recone, refoam, replace</li>
+                <li>DJ equipment</li>
+                <li>PA speakers</li>
+                <li>power amps</li>
+                <li>receivers</li>
+                <li>turntable</li>
+                <li>tape deck</li>
+                <li>CD players</li>
+                <li>audio mixers</li>
+                <li>wireless and wired microphones</li>
+                <li>rebuild speaker drivers</li>
+                <li>cable repair and custom build</li>
+                <li>pro and home audio speakers repair</li>
+                <li>recone, refoam, replace</li>
+                <li>DJ equipment</li>
+                <li>PA speakers</li>
+                <li>power amps</li>
+                <li>receivers</li>
+                <li>turntable</li>
+                <li>tape deck</li>
+                <li>CD players</li>
+                <li>audio mixers</li>
+                <li>wireless and wired microphones</li>
+                <li>rebuild speaker drivers</li>
+                <li>cable repair and custom build</li>
+            </ul>
+
+            {/* <ul>
               <li>pro and home audio speakers repair</li>
               <li>recone, refoam, replace</li>
               <li>DJ equipment</li>
@@ -79,7 +108,7 @@ function App() {
                       <FontAwesomeIcon icon={faCaretUp} className='fa-caret'/>
                 </div>
               )}
-            </div>  
+            </div>   */}
           </div>
 
           {/* Hours section */}
